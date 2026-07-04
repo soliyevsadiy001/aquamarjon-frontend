@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no" />
+    <title>AquaMarjon</title>
+    <meta name="color-scheme" content="dark" />
+    <meta name="theme-color" content="#08131F" />
+    <style>
+      /* Тёмный фон сразу, до маунта React — иначе между загрузкой HTML
+         и первым рендером Telegram WebView мигает белым. #08131F = COLORS.bg. */
+      html, body, #root { height: 100%; margin: 0; background: #08131F; }
+      body { -webkit-tap-highlight-color: transparent; overscroll-behavior: none; }
+    </style>
+    <!-- Telegram Mini Apps JS SDK — App.tsx уже читает window.Telegram.WebApp -->
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
